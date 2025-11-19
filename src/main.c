@@ -67,7 +67,6 @@ int main(void)
     PORTB &= ~((1<<A1) | (1<<A2) | (1<<B1) | (1<<B2)); // Turn digital pins 8 - 11 OFF
 
     // ----- Timer1 Setup -----
-
     // CTC mode: clear timer on compare
     TCCR1B |= (1 << WGM12);
 

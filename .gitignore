@@ -3,6 +3,8 @@
 *.obj
 *.lo
 *.slo
+*.elf
+*.hex
 
 # Static and dynamic libraries
 *.a

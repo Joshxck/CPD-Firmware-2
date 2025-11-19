@@ -1,0 +1,49 @@
+# Compiled object files
+*.o
+*.obj
+*.lo
+*.slo
+
+# Static and dynamic libraries
+*.a
+*.la
+*.lib
+*.dll
+*.so
+*.dylib
+
+# Executable files
+*.exe
+*.out
+*.app
+*.hex
+*.elf
+*.bin
+*.map
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Build system files
+build/
+Build/
+BUILD/
+bin/
+obj/
+out/
+Debug/
+Release/
+
+# IDE-specific (optional)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# STM32CubeIDE-specific (if you use it)
+.settings/
+.metadata/
+*.launch

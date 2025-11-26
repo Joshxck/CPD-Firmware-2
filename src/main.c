@@ -34,11 +34,7 @@ ISR(TIMER1_COMPA_vect)
     }
 }
 
-int main(void)
-{
-    DDRB |= (1<<EN_PIN) | (1<<STEP_PIN) | (1<<DIR_PIN); // Set PB0-0 as output (digital pins 8 - 11)
-    PORTB &= ~((1<<EN_PIN) | (1<<DIR_PIN)); // Turn digital pins 8, 10 OFF
-
+void setup_timer_interrupt(void) {
     // ----- Timer1 Setup -----
     // CTC mode: clear timer on compare
     TCCR1B |= (1 << WGM12);
@@ -51,8 +47,17 @@ int main(void)
 
     // Start timer with prescaler 64
     TCCR1B |= (1 << CS11) | (1 << CS10);
+}
 
+int main(void)
+{
+    DDRB |= (1<<EN_PIN) | (1<<STEP_PIN) | (1<<DIR_PIN); // Set PB0-0 as output (digital pins 8 - 11)
+    PORTB &= ~((1<<EN_PIN) | (1<<DIR_PIN)); // Turn digital pins 8, 10 OFF
+
+    setup_timer_interrupt();
     sei();
 
     while (1) {}
 }
+
+

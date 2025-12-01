@@ -17,7 +17,7 @@ $(TARGET).hex: $(TARGET).elf
 
 # ---- Upload using Arduino bootloader via USB ----
 flash: $(TARGET).hex
-	avrdude -c arduino -p m328p -P COM4 -b 115200 -U flash:w:$(TARGET).hex:i
+	avrdude -c arduino -p m328p -P COM5 -b 115200 -U flash:w:$(TARGET).hex:i
 
 clean:
 	rm -f *.elf *.hex
